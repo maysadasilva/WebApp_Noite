@@ -1,0 +1,112 @@
+﻿<div class="row">
+
+    <div class="col-12">
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Lista de Clientes</h2>
+            </div>
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-2">
+                        <a href="/Cliente/Cadastrar" class="btn btn-success">
+                            Novo Cliente
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <select name="filtro" class="form-control">
+                            <option value="0">Todas Opções</option>
+                            <option value="id">Por Código</option>
+                            <option value="nome">Por Nome</option>
+                            <option value="qtd">Por Telefone</option>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" name="busca" class="form-control" />
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-primary">
+                            Pesquisar
+                        </button>
+                    </div>
+
+                </div>
+
+                <form action="/Cliente/Pesquisa" method="get">
+                </form>
+
+
+
+                <table class="table table-striped">
+
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Fernando Graciano</td>
+                            <td>(16) 9976 8909</td>
+                            <td>
+                                <a href="/Cliente/Editar/1"
+                                   class="btn btn-warning">
+                                    Editar
+                                </a>
+                                <a href="/Cliente/Excluir/1"
+                                   class="btn btn-danger">
+                                    Excluir
+                                </a>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Joao da Silva</td>
+                            <td>16 9876 890098</td>
+                            <td>
+                                <a href="/Cliente/Editar/2"
+                                   class="btn btn-warning">
+                                    Editar
+                                </a>
+                                <a href="/Cliente/Excluir/2"
+                                   class="btn btn-danger">
+                                    Excluir
+                                </a>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Maria Eduarda</td>
+                            <td>16 98789876</td>
+                            <td>
+                                <a href="/Cliente/Editar/3"
+                                   class="btn btn-warning">
+                                    Editar
+                                </a>
+                                <a href="/CLiente/Excluir/3"
+                                   class="btn btn-danger">
+                                    Excluir
+                                </a>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
