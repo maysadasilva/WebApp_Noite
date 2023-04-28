@@ -1,4 +1,6 @@
-﻿<div class="row">
+﻿@model List<WebApp_Noite.Models.ClientesModel>
+
+<div class="row">
 
     <div class="col-12">
 
@@ -50,57 +52,27 @@
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Fernando Graciano</td>
-                            <td>(16) 9976 8909</td>
-                            <td>
-                                <a href="/Cliente/Editar/1"
+                        @foreach (var cliente in Model)
+                        {
+                            
+                            <tr>
+                                <td> @cliente.Id </td>
+                                <td> @cliente.Nome </td>
+                                <td> @cliente.Telefone </td>
+                                <td>
+                                    <a href="/Cliente/Editar/@cliente.Id"
                                    class="btn btn-warning">
-                                    Editar
-                                </a>
-                                <a href="/Cliente/Excluir/1"
+                                        Editar
+                                    </a>
+                                    <a href="/Cliente/Excluir/@cliente.Id"
                                    class="btn btn-danger">
-                                    Excluir
-                                </a>
+                                        Excluir
+                                    </a>
 
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>2</td>
-                            <td>Joao da Silva</td>
-                            <td>16 9876 890098</td>
-                            <td>
-                                <a href="/Cliente/Editar/2"
-                                   class="btn btn-warning">
-                                    Editar
-                                </a>
-                                <a href="/Cliente/Excluir/2"
-                                   class="btn btn-danger">
-                                    Excluir
-                                </a>
-
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>3</td>
-                            <td>Maria Eduarda</td>
-                            <td>16 98789876</td>
-                            <td>
-                                <a href="/Cliente/Editar/3"
-                                   class="btn btn-warning">
-                                    Editar
-                                </a>
-                                <a href="/CLiente/Excluir/3"
-                                   class="btn btn-danger">
-                                    Excluir
-                                </a>
-
-                            </td>
-                        </tr>
-                    </tbody>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
                 </table>
 
             </div>
